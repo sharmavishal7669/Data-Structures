@@ -26,10 +26,36 @@ public class SinglyLinkedList {
         length++;
     }
 
+    public void insertAtLast(int data)
+    {
+        ListNode newNode = new ListNode(data);
+
+        if(head == null)
+        {
+            head = newNode;
+        }
+        else
+        {
+            ListNode current = head;
+
+            while(current.next != null)
+                current = current.next;
+
+            current.next = newNode;
+        }
+
+        length++;
+    }
+
+    public void getLength()
+    {
+        System.out.println("Length : "+length);
+    }
+
     public void display()
     {
         ListNode current = head;
-        while(current!=null)
+        while(current != null)
         {
             System.out.print(current.data + " --> ");
             current = current.next;

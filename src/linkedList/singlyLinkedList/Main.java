@@ -9,5 +9,11 @@ public class Main {
         sll.display();
         sll.insertAtFirst(30);
         sll.display();
+        sll.getLength();
+        sll.insertAtLast(40);
+        sll.display();
+        sll.insertAtLast(50);
+        sll.display();
+        sll.getLength();
     }
 }
