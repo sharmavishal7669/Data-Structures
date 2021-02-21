@@ -84,6 +84,72 @@ public class SinglyLinkedList {
         }
     }
 
+    public void deleteFirst()
+    {
+        if(head == null)
+            System.out.println("Oops! Your list is empty.");
+        else
+        {
+            head = head.next;
+            length--;
+        }
+    }
+
+    public void deleteLast()
+    {
+        if(head == null)
+            System.out.println("Oops! Your list is empty.");
+        else if(head.next == null)
+        {
+            head = null;
+
+            length--;
+        }
+        else
+        {
+            ListNode current = head;
+
+            while(current.next.next != null)
+                current = current.next;
+
+            current.next = null;
+
+            length--;
+        }
+    }
+
+    public void deleteFromPos(int pos)
+    {
+        if(pos < 1 || pos > length)
+        {
+            System.out.println("Oops! You're trying to delete from invalid position. Please review your list below and try again.");
+            display();
+        }
+        else if(pos == 1)
+        {
+            deleteFirst();
+        }
+        else if(pos == length)
+        {
+            deleteLast();
+        }
+        else
+        {
+            ListNode current = head;
+
+            int pointer = 1;
+            while(pointer < pos-1)
+            {
+                current = current.next;
+                pointer++;
+            }
+
+            current.next = current.next.next;
+
+            length--;
+        }
+    }
+
     public void getLength()
     {
         System.out.println("Length : "+length);

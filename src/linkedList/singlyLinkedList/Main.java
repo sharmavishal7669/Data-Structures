@@ -28,5 +28,15 @@ public class Main {
         sll.display();
         sll.insertAtPos(12,110);
         sll.getLength();
+        sll.deleteFirst();
+        sll.display();
+        sll.deleteLast();
+        sll.display();
+        sll.getLength();
+        sll.deleteFromPos(3);
+        sll.display();
+        sll.deleteFromPos(2);
+        sll.display();
+        sll.getLength();
     }
 }
