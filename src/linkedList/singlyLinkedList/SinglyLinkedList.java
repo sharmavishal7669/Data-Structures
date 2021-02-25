@@ -150,6 +150,38 @@ public class SinglyLinkedList {
         }
     }
 
+    public void deleteData(int data)
+    {
+        if(head == null)
+            System.out.println("Oops! You're trying to delete from an empty list.");
+        else
+        {
+            ListNode current = head;
+            ListNode prev = null;
+            if(current.data == data) {
+                head = head.next;
+                length--;
+            }
+            else {
+                int flag = 0;
+                while (current != null) {
+                    if (current.data == data) {
+                        prev.next = current.next;
+                        flag = 1;
+                        length--;
+                        break;
+                    }
+                    else {
+                        prev = current;
+                        current = current.next;
+                    }
+                }
+                if(flag == 0)
+                    System.out.println("Oops! You have entered an invalid key.");
+            }
+        }
+    }
+
     public void getLength()
     {
         System.out.println("Length : "+length);

@@ -1,5 +1,5 @@
 package linkedList.singlyLinkedList;
-
+//https://www.geeksforgeeks.org/data-structures/linked-list/singly-linked-list/ --> GFG Singly Linked List
 public class Main {
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
@@ -38,5 +38,12 @@ public class Main {
         sll.deleteFromPos(2);
         sll.display();
         sll.getLength();
+        sll.deleteData(50);
+        sll.display();
+        sll.deleteData(30);
+        sll.display();
+        sll.deleteData(20);
+        sll.getLength();
+        sll.display();
     }
 }
