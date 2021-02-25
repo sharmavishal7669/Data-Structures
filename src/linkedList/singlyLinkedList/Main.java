@@ -45,5 +45,7 @@ public class Main {
         sll.deleteData(20);
         sll.getLength();
         sll.display();
+        sll.clearList();
+        sll.display();
     }
 }

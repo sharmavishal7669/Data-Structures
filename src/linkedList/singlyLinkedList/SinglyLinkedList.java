@@ -13,15 +13,10 @@ public class SinglyLinkedList {
     {
         ListNode newNode = new ListNode(data);
 
-        if(head == null)
-        {
-            head = newNode;
-        }
-        else
-        {
+        if (head != null) {
             newNode.next = head;
-            head = newNode;
         }
+        head = newNode;
 
         length++;
     }
@@ -180,6 +175,12 @@ public class SinglyLinkedList {
                     System.out.println("Oops! You have entered an invalid key.");
             }
         }
+    }
+
+    public void clearList()
+    {
+        head = null;
+        length = 0;
     }
 
     public void getLength()
