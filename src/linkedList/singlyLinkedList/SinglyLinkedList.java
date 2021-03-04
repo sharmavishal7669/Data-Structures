@@ -212,6 +212,23 @@ public class SinglyLinkedList {
         }
     }
 
+    public void removeDuplicates()
+    {
+        ListNode current = head;
+        if(head == null)
+            System.out.println("Your list is empty!");
+        else {
+            while (current.next != null) {
+                if(current.data == current.next.data)
+                    current.next = current.next.next;
+                else
+                    current = current.next;
+            }
+
+            display();
+        }
+    }
+
     public void getLength()
     {
         System.out.println("Length : "+length);

@@ -55,5 +55,17 @@ public class Main {
         sll.display();
         sll.getNthNodeFromEnd(3);
         sll.getNthNodeFromEnd(10);
+        sll.clearList();
+        sll.insertAtFirst(10);
+        sll.insertAtLast(10);
+        sll.insertAtLast(20);
+        sll.insertAtLast(30);
+        sll.insertAtLast(30);
+        sll.insertAtLast(30);
+        sll.insertAtLast(40);
+        sll.insertAtLast(50);
+        sll.insertAtLast(50);
+        sll.display();
+        sll.removeDuplicates();
     }
 }
