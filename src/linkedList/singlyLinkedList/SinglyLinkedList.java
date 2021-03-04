@@ -183,6 +183,35 @@ public class SinglyLinkedList {
         length = 0;
     }
 
+    public void getNthNodeFromEnd(int n)
+    {
+        if(head == null)
+            System.out.println("Your list is Empty!!");
+        else if(n<=1 || n>length)
+        {
+            System.out.println("You have entered an invalid position. Please review your list!");
+            display();
+        }
+        else
+        {
+            ListNode mainPtr = head;
+            ListNode current = head;
+            int count = 0;
+            while(count < n)
+            {
+                current = current.next;
+                count++;
+            }
+            while(current != null)
+            {
+                mainPtr = mainPtr.next;
+                current = current.next;
+            }
+
+            System.out.println(n + " node from last is : " + mainPtr.data);
+        }
+    }
+
     public void getLength()
     {
         System.out.println("Length : "+length);
